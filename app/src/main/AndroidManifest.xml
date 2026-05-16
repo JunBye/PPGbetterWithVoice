@@ -3,25 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.projekcik">
 
-    <!-- Uprawnienia -->
+    <!-- 권한 -->
     <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32"/>
     <uses-permission android:name="android.permission.INTERNET"/>
 
-    <!-- Dla Androida 11+ -->
+    <!-- Android 11+ 외부 저장소 -->
     <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage"
         android:maxSdkVersion="30" />
 
-    <!-- Funkcje sprzętowe -->
+    <!-- 하드웨어 기능 -->
     <uses-feature android:name="android.hardware.camera" android:required="false" />
     <uses-feature android:name="android.hardware.camera.flash" android:required="false" />
     <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
     <uses-feature android:name="android.hardware.camera.front" android:required="false" />
     <uses-feature android:name="android.hardware.camera.front.autofocus" android:required="false" />
+    <uses-feature android:name="android.hardware.microphone" android:required="false" />
 
-    <!-- Aplikacja -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -31,21 +32,32 @@
         android:networkSecurityConfig="@xml/network_security_config"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
 
-        <!-- Główna aktywność -->
+        <!-- 참가자 선택 화면 (런처) -->
         <activity
-            android:name=".MainActivity"
+            android:name=".SessionActivity"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             tools:ignore="LockedOrientationActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
+        <!-- 체크리스트 화면 -->
+        <activity
+            android:name=".ChecklistActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+
+        <!-- 측정 화면 -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            tools:ignore="LockedOrientationActivity" />
 
     </application>
 </manifest>

@@ -1,12 +1,39 @@
 <resources>
     <string name="app_name">PPGbetter</string>
-    <string name="Title">PPG Heart Rate Monitor Better</string>
+    <string name="Title">PPG Heart Rate Monitor</string>
     <string name="Data1">Frame #</string>
     <string name="Data2">Frame Size</string>
     <string name="Data3">AVG</string>
     <string name="Data4">Calculating</string>
-    <string name="measurement_button_start">Rozpocznij nagrywanie</string>
-    <string name="measurement_button_end">Zatrzymaj nagrywanie</string>
+
+    <!-- 측정 버튼 -->
+    <string name="measurement_button_start">측정 시작</string>
+    <string name="measurement_button_end">측정 종료</string>
     <string name="measurement_button_start_wd">Wdech (Inhale)</string>
     <string name="measurement_button_end_wy">Wydech (Exhale)</string>
+
+    <!-- SessionActivity -->
+    <string name="session_title">PPG + Voice 데이터 수집</string>
+    <string name="participant_id_label">참가자 ID 입력</string>
+    <string name="participant_id_hint">예: P01</string>
+    <string name="participant_id_format_hint">영문, 숫자, 하이픈(-), 밑줄(_)만 사용 가능합니다.</string>
+    <string name="existing_participant_label">기존 참가자 선택 (선택 시 자동 입력)</string>
+    <string name="spinner_hint">-- 기존 참가자 선택 --</string>
+    <string name="start_session">세션 시작</string>
+    <string name="enter_participant_id">참가자 ID를 입력해 주세요.</string>
+    <string name="invalid_participant_id">ID는 영문, 숫자, 하이픈(-), 밑줄(_)만 사용 가능합니다.</string>
+    <string name="permission_required">카메라와 마이크 권한이 필요합니다.</string>
+
+    <!-- ChecklistActivity -->
+    <string name="checklist_title">클립 체크리스트</string>
+    <string name="participant_placeholder">참가자: -</string>
+    <string name="participant_label">참가자: %s</string>
+    <string name="part_a_title">Part A — 감정 발화</string>
+    <string name="part_a_description">8가지 감정 중 하나를 선택하여 PPG + 음성을 녹음합니다. ✅ = 완료 (재촬영 가능)</string>
+    <string name="part_b_title">Part B — 진실/거짓 발화</string>
+    <string name="part_b_description">True 5회, Fake 5회를 녹음합니다. ✅ = 완료 (재촬영 가능)</string>
+
+    <!-- MainActivity -->
+    <string name="clip_info_none">클립 정보 없음</string>
+    <string name="clip_saved">저장 완료: %s</string>
 </resources>
