@@ -31,3 +31,14 @@ google-services.json
 
 # Android Profiling
 *.hprof
+
+# Claude Code
+.claude/
+
+# Auto-generated logs
+IMPLEMENTATION_LOG.md
+
+# Experiment data (participant biometric data - never commit)
+*.wav
+*.csv
+ppg_data/
